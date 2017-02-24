@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!-- This file is part of Tryton.  The COPYRIGHT file at the top level of
+this repository contains the full copyright notices and license terms. -->
+<tryton>
+    <data>
+
+    <!-- Service2Draft -->
+    <record model="ir.ui.view" id="invoice_service_start_view_form">
+        <field name="model">service.invoice_service.start</field>
+        <field name="type">form</field>
+        <field name="name">invoice_service_start_form</field>
+    </record>
+
+    <record model="ir.action.wizard" id="wizard_invoice_service">
+        <field name="name">Invoice Service</field>
+        <field name="wiz_name">service.invoice_service</field>
+        <field name="model">service.service</field>
+    </record>
+
+    <record model="ir.action.keyword" id="act_wizard_invoice_service_keyword">
+        <field name="keyword">form_action</field>
+        <field name="model">service.service,-1</field>
+        <field name="action" ref="wizard_invoice_service"/>
+    </record>
+
+    <!-- Group  -->
+    <record model="res.group" id="group_service_invoice">
+        <field name="name">Nodux - Facturar Servicio</field>
+    </record>
+    <record model="res.user-res.group"
+        id="user_admin_group_service_invoice">
+        <field name="user" ref="res.user_admin"/>
+        <field name="group" ref="group_service_invoice"/>
+    </record>
+    <record model="res.user-res.group"
+        id="user_trigger_group_service_invoice">
+        <field name="user" ref="res.user_admin"/>
+        <field name="group" ref="group_service_invoice"/>
+    </record>
+
+    <!-- relacionado-->
+    <record model="ir.action.act_window" id="act_invoice_service_form">
+        <field name="name">Invoices</field>
+        <field name="res_model">sale.sale</field>
+        <field name="domain">[('ref_technical', 'in', Eval('active_ids'))]</field>
+    </record>
+    <record model="ir.action.keyword"
+            id="act_invoice_service_form_keyword1">
+        <field name="keyword">form_relate</field>
+        <field name="model">service.service,-1</field>
+        <field name="action" ref="act_invoice_service_form"/>
+    </record>
+  </data>
+</tryton>

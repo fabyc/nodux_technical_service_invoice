@@ -1,0 +1,43 @@
+#
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "field:sale.sale,ref_technical:"
+msgid "Service"
+msgstr "Servicio"
+
+msgctxt "field:service.invoice_service.start,id:"
+msgid "ID"
+msgstr "Identificador"
+
+msgctxt "model:ir.action,name:act_invoice_service_form"
+msgid "Invoices"
+msgstr "Facturas"
+
+msgctxt "model:ir.action,name:wizard_invoice_service"
+msgid "Invoice Service"
+msgstr "Facturar Servicio"
+
+msgctxt "model:res.group,name:group_service_invoice"
+msgid "Nodux - Facturar Servicio"
+msgstr ""
+
+msgctxt "model:service.invoice_service.start,name:"
+msgid "Draft Service Start"
+msgstr "Facturar Servicio"
+
+msgctxt "view:service.invoice_service.start:"
+msgid "Are you sure to invoice those/this service(s)?"
+msgstr "¿Está seguro de facturar este/estos servicio(s)?"
+
+msgctxt "view:service.invoice_service.start:"
+msgid "Invoice Service"
+msgstr "Facturar Servicio"
+
+msgctxt "wizard_button:service.invoice_service,start,end:"
+msgid "Exit"
+msgstr "Salir"
+
+msgctxt "wizard_button:service.invoice_service,start,invoice_:"
+msgid "Facturar"
+msgstr "Facturar"
